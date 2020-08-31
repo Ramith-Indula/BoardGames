@@ -4,7 +4,7 @@ Game Flow
 		2.1) Player Vs Player
 
 			2.1.1) New Game
-				2.1.1.1) Create New Players - Prompt user to enter details, save player profiles and return to game
+				2.1.1.1) Create New Players - Prompt userS to enter details, save player profiles and return to game
 				2.1.1.2) Use Existing Players - Prompt for "User Name" and "Password"
 			2.1.2) Load Game
 				2.1.2.1) Load Users First - Prompt for "User Name" and "Password", If matches Load saved game data.
