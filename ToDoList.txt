@@ -1,0 +1,100 @@
+Game Flow
+	1)Runs Application 
+	2)Main Menu
+		2.1) Player Vs Player
+
+			2.1.1) New Game
+				2.1.1.1) Create New Players - Prompt user to enter details, save player profiles and return to game
+				2.1.1.2) Use Existing Players - Prompt for "User Name" and "Password"
+			2.1.2) Load Game
+				2.1.2.1) Load Users First - Prompt for "User Name" and "Password", If matches Load saved game data.
+
+
+		2.2) Player Vs Computer
+
+			2.2.1) New Game
+				2.2.1.1) Create New Player - Prompt user to enter details, save player profile and return to game
+				2.2.1.2) Use Existing Player - Prompt for "User Name" and "Password"
+			2.2.2) Load Game
+				2.2.2.1) Load User First - Prompt for "User Name" and "Password", If matches Load saved game data.
+
+		2.3) Exit
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+											Features of options
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+#2.2.1.1 - Prompt User to ,
+						-Enter "User Name"
+						-Enter "Password"(Hash the password)
+		Display Options,
+						-"Save & Start Game"
+						-"Discard & Go Back"
+						-"Quit the Game"
+
+Special Note - Create a user file for each user which contains "User Name" and "Password"(Hash the password). Use the "User Name" as the file name
+			   Whenever a user selects "Use Existing Player",prompt to enter "User Name" and if the "User Name" matches with an
+			   exsisting file, extract data and prompt for "password". If the file name doesn't match with the "User Name", Display
+			   an error message and prompt fot "User Name" again. Display options to "Quit" and "Return to main menu"
+			   
+			   Find a way to save "Game Data" in the "User File" with a "Timestamp" when a user saves the current game. When "Load Game"
+			   option selectes, run the steps previously mentioned and "Load the game data".
+			
+			Or 
+				Use different naming convention to save game data in a separate file. 
+				(For an example: "User_Name"+"GameData"). Where Save Game Limitation can be easily implemented.
+
+
+
+			   
+#2.2.1.2 - Prompt User to ,
+						-Enter "User Name"
+						-Enter "Password"
+						(If the "User Name" or "Password" doesn't match, Display an error message and prompt again. 
+						Display options to "Quit" and "Return to main menu")
+
+		Display Options,
+						-"Start Game"
+						-"Quit the Game"
+
+
+
+===========================================[Above flow is valid when it is only a Player VS Computer]=========================================
+
+If the game is Player VS Player - Repeat the process for two times for two players. 
+								  Make sure to create the board once and assign GamePieces separately.
+								  (Find a Proper way to do that)
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+#2.2.1 - Prompt User to ,
+						-Enter "User Name"
+						-Enter "Password"
+						(If the "User Name" or "Password" doesn't match, Display an error message and prompt again. 
+						Display options to "Quit" and "Return to main menu")
+						-Display the last saved game file and provide the option to select that.
+
+
+Special Note - Whenever a user selects the option "Load Game", prompt to enter "User Name" and if the "User Name" matches with an
+			   exsisting file, extract data and prompt for "password". If the file name doesn't match with the "User Name", Display
+			   an error message and prompt fot "User Name" again. Display options to "Quit" and "Return to main menu". 
+
+===========================================[Above flow is valid when it is only a Player VS Computer]=========================================
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+***Save Game Limitation - A user can have only one saved game. Each time a user saves a current game, the existing file will
+						  be updated(overide the file with new data) and that will become the latest saved game.
+
+
+
+
+Main Components - Game(Which one out of three games)
+				  Game Play and Display Game Rules
+				  Player VS Player(Movements of the Game Pieces)
+				  Player VS Computer(Algorithm for computer Play)
+				  Score Board
+				  Winner Selection
+				  
