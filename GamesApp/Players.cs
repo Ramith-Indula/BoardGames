@@ -8,12 +8,25 @@ namespace GamesApp
     {
         private string playerName;
         private int playerId;
-        private string difficultyLevel;
+        private string[] difficultyLevel;
+
+        public Players(string playerName, int playerId)
+        {
+            PlayerName = playerName;
+            PlayerId = playerId;
+        }
+
+
+        public string[] DifficultyLevel { get; } = {"Easy", "Hard"};
+
+
+        public string PlayerName { get; set; }
+
+        public int PlayerId { get; set; }
 
 
 
-
-        public void createrPlaye()
+        public void createrPlayer()
         {
 
         }
