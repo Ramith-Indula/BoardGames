@@ -6,7 +6,6 @@ namespace GamesApp
 {
     class GameModeSelection
     {
-
         //required data fields
         private const string mainMenuOption1 = "Human vs Human";
         private const string mainMenuOption2 = "Human vs Computer";
@@ -17,15 +16,11 @@ namespace GamesApp
         private int option;
         private const string gomoku = "GOMOKU";
         private static string userInput;
-
-
-
         //constructors
         public GameModeSelection()
         {
 
         }
-
         public int MainMenu()
         {
             Console.WriteLine("-------------------------------------------------------------------");
@@ -45,12 +40,12 @@ namespace GamesApp
                     if (option == 0 || option == 1 || option == 2)//check the input is between 0-40 
                         exit = true;//if true exit the loop
                     else
-                        Console.Write("\nPlease enter a valid option number >>> ");//if not prompt the user again
+                        Console.Write("\nPlease enter a valid option number.\n");//if not prompt the user again
 
                 }
 
                 else
-                    Console.Write("\nPlease enter a valid option number >>> ");// if the input in not an integer prompt user again
+                    Console.Write("\nPlease enter a valid option number.\n");// if the input in not an integer prompt user again
             }
             while (!exit);
             exit = false;
@@ -58,8 +53,6 @@ namespace GamesApp
 
             return option;
         }
-
-
         public int SecondaryMenu()
         {
             Console.WriteLine("Please Select one of the options below:\n 0 {0}\n 1 {1}\n 2 Go Back", secondaryMenuOption1, secondaryMenuOption2);
@@ -76,12 +69,12 @@ namespace GamesApp
                     if (option == 0 || option == 1 || option == 2)//check the input is between 0-2 
                         exit = true;//if true exit the loop
                     else
-                        Console.Write("\nPlease enter a valid option number >>> ");//if not prompt the user again
+                        Console.Write("\nPlease enter a valid option number.\n");//if not prompt the user again
 
                 }
 
                 else
-                    Console.Write("\nPlease enter a valid option number >>> ");// if the input in not an integer prompt user again
+                    Console.Write("\nPlease enter a valid option number.\n");// if the input in not an integer prompt user again
             }
             while (!exit);
             exit = false;
@@ -89,11 +82,9 @@ namespace GamesApp
 
             return option;
         }
-
-
         public int ThirdMenu()
         {
-            Console.WriteLine("Please Select one of the options below:\n 0 {0}\n 1 {1}\n 2 Go Back", thirdMenuOption1, thirdMenuOption2);
+            Console.WriteLine("Please Select one of the options below:\n 0 {0}\n 1 {1}\n 2 Exit to Main Menu", thirdMenuOption1, thirdMenuOption2);
 
             bool exit = false; // set the exit variable again to false state
             do
@@ -107,12 +98,12 @@ namespace GamesApp
                     if (option == 0 || option == 1 || option == 2)//check the input is between 0-2 
                         exit = true;//if true exit the loop
                     else
-                        Console.Write("\nPlease enter a valid option number >>> ");//if not prompt the user again
+                        Console.Write("\nPlease enter a valid option number \n>>> ");//if not prompt the user again
 
                 }
 
                 else
-                    Console.Write("\nPlease enter a valid option number >>> ");// if the input in not an integer prompt user again
+                    Console.Write("\nPlease enter a valid option number \n>>> ");// if the input in not an integer prompt user again
             }
             while (!exit);
             exit = false;
@@ -122,7 +113,4 @@ namespace GamesApp
         }
 
     }
-
-
-
 }

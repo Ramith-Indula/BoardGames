@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Net.Mime;
+using System.Security;
+using System.Text;
 
 namespace GamesApp
 {
@@ -7,21 +9,16 @@ namespace GamesApp
     {
 
         private static GameModeSelection gameModeSelection = new GameModeSelection();
+        private static Players players = new Players();
         private static Players[] PlayerList;
         private static string playerName;
         private static int gameOption;
         private static int id = 1;
-
-
         static void Main(string[] args)
         {
             StartGame();
 
         }
-
-
-
-
         static void StartGame()
         {
             gameOption = gameModeSelection.MainMenu();
@@ -32,19 +29,21 @@ namespace GamesApp
                 {
                     gameOption = gameModeSelection.ThirdMenu();
                     InitializePlayers(gameOption);
-                }else if (gameOption == 1 )
+                }
+                else if (gameOption == 1)
                 {
                     /* Implementation or call of Load Game function to be done here !
                    * Refer ToDoList.txt
                    */
                 }
-                else if(gameOption == 2)
+                else if (gameOption == 2)
                 {
                     StartGame();
                 }
-                
 
-            }else if (gameOption == 1)
+
+            }
+            else if (gameOption == 1)
             {
                 /* Implementation or call of Human vs Computer function to be done here !
                    * Refer ToDoList.txt
@@ -56,12 +55,13 @@ namespace GamesApp
                 Environment.Exit(0);
             }
 
-            
-        }
 
+        }
         static void InitializePlayers(int gameOption)
         {
-            
+            string password = "";
+
+
             if (gameOption == 0)
             {
                 PlayerList = new Players[2];
@@ -69,30 +69,54 @@ namespace GamesApp
                 {
                     Console.Write("...................................\n" + "Enter Player{0} Name   >>> ", i + 1);
                     playerName = Console.ReadLine();
-                    Players player = new Players(playerName,generateId());
+                    Console.Write("Enter Password for {0}   >>> ", playerName);
+                    password = players.GetConsolePassword();
+                    Players player = new Players(playerName, generateId(), password);
                     PlayerList[i] = player;
+
                 }
 
-                for (int i = 0; i < PlayerList.Length; i++)
+                /*for (int i = 0; i < PlayerList.Length; i++)
                 {
-                    Console.WriteLine("Player Name: {0}\n Player ID: {1}", PlayerList[i].PlayerName, PlayerList[i].PlayerId);
-                }
-            }else if (gameOption == 1)
+                    Console.WriteLine("Player Name: {0}\n Player ID: {1}\n Password: {2}", PlayerList[i].PlayerName, PlayerList[i].PlayerId,PlayerList[i].Password);
+                }*/
+            }
+            else if (gameOption == 1)
             {
-                 /* Implementation of using existing players function to be done here !
-                  * Refer ToDoList.txt
-                  */
+                for (int i = 0; i < 2; i++)
+                {
+                    Console.Write("...................................\n" + "Enter Player Name   >>> ");
+                    playerName = Console.ReadLine();
+                    players.ValidatePlayer(playerName);
+                }
+
+                Console.WriteLine("Players Loaded!");
+                /*
+                 * Staring point of a new Human vs Human game by using existing players.....
+                 */
+
+            }
+            else
+            {
+                StartGame();
             }
 
-            
-        }
 
+
+
+        }
         static int generateId()
         {
             int randomId = id++;
             return 000 + randomId;
         }
+
+
+
     }
+
+
+
 }
 
 
