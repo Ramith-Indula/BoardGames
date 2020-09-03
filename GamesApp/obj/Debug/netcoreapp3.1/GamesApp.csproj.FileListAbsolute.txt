@@ -1,0 +1,13 @@
+D:\#QUT\SEMESTER 02,2020\IFN563 - Object Oriented Designing\Assignment 01\GamesApp\GamesApp\bin\Debug\netcoreapp3.1\GamesApp.exe
+D:\#QUT\SEMESTER 02,2020\IFN563 - Object Oriented Designing\Assignment 01\GamesApp\GamesApp\bin\Debug\netcoreapp3.1\GamesApp.deps.json
+D:\#QUT\SEMESTER 02,2020\IFN563 - Object Oriented Designing\Assignment 01\GamesApp\GamesApp\bin\Debug\netcoreapp3.1\GamesApp.runtimeconfig.json
+D:\#QUT\SEMESTER 02,2020\IFN563 - Object Oriented Designing\Assignment 01\GamesApp\GamesApp\bin\Debug\netcoreapp3.1\GamesApp.runtimeconfig.dev.json
+D:\#QUT\SEMESTER 02,2020\IFN563 - Object Oriented Designing\Assignment 01\GamesApp\GamesApp\bin\Debug\netcoreapp3.1\GamesApp.dll
+D:\#QUT\SEMESTER 02,2020\IFN563 - Object Oriented Designing\Assignment 01\GamesApp\GamesApp\bin\Debug\netcoreapp3.1\GamesApp.pdb
+D:\#QUT\SEMESTER 02,2020\IFN563 - Object Oriented Designing\Assignment 01\GamesApp\GamesApp\obj\Debug\netcoreapp3.1\GamesApp.csprojAssemblyReference.cache
+D:\#QUT\SEMESTER 02,2020\IFN563 - Object Oriented Designing\Assignment 01\GamesApp\GamesApp\obj\Debug\netcoreapp3.1\GamesApp.AssemblyInfoInputs.cache
+D:\#QUT\SEMESTER 02,2020\IFN563 - Object Oriented Designing\Assignment 01\GamesApp\GamesApp\obj\Debug\netcoreapp3.1\GamesApp.AssemblyInfo.cs
+D:\#QUT\SEMESTER 02,2020\IFN563 - Object Oriented Designing\Assignment 01\GamesApp\GamesApp\obj\Debug\netcoreapp3.1\GamesApp.csproj.CoreCompileInputs.cache
+D:\#QUT\SEMESTER 02,2020\IFN563 - Object Oriented Designing\Assignment 01\GamesApp\GamesApp\obj\Debug\netcoreapp3.1\GamesApp.dll
+D:\#QUT\SEMESTER 02,2020\IFN563 - Object Oriented Designing\Assignment 01\GamesApp\GamesApp\obj\Debug\netcoreapp3.1\GamesApp.pdb
+D:\#QUT\SEMESTER 02,2020\IFN563 - Object Oriented Designing\Assignment 01\GamesApp\GamesApp\obj\Debug\netcoreapp3.1\GamesApp.genruntimeconfig.cache

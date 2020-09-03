@@ -1,0 +1,109 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace GamesApp
+{
+    class GameBoard
+    {
+
+        public GameBoard()
+        {
+
+        }
+
+
+        public void Grid()
+        {
+            int y, x, z = 0;
+            string[,] arr1 = new string[10, 10];
+
+
+            for (y = 0; y < 10; y++)
+            {
+                for (x = 0; x < 10; x++)
+                {
+                    // Console.Write("element - [{0},{1}] : \n", y, x);
+                    arr1[y, x] = "X";
+                }
+            }
+
+            Console.Write("__________________________________");
+            for (y = 0; y < 10; y++)
+            {
+                Console.Write("\n{0}  |_", y);
+                for (x = 0; x < 10; x++)
+                {
+                    Console.Write("_{0}_", arr1[y, x]);
+                }
+
+                Console.Write("_|");
+            }
+
+            Console.Write("\n\n");
+        
+    } 
+        public void UpdateGrid(int row, int col)
+        {
+            int y, x, z = 0;
+            string[,] arr1 = new string[10, 10];
+
+
+            for (y = 0; y < 10; y++)
+            {
+                for (x = 0; x < 10; x++)
+                {
+                   // Console.Write("element - [{0},{1}] : \n", y, x);
+                    arr1[row, col] = "W";
+                }
+            }
+
+            Console.Write("__________________________________");
+            for (y = 0; y < 10; y++)
+            {
+                Console.Write("\n{0}  |_", y);
+                for (x = 0; x < 10; x++)
+                {
+                    Console.Write("_{0}_", arr1[y, x]);
+                }
+                Console.Write("_|");
+            }
+            Console.Write("\n\n");
+        }
+
+
+
+        /*public void Grid()
+        {
+            int i, j;
+            int[,] arr1 = new int[10, 10];
+
+            Console.Write("\n\nRead a 2D array of size 3x3 and print the matrix :\n");
+            Console.Write("------------------------------------------------------\n");
+
+
+            // Stored values into the array
+            Console.Write("Input elements in the matrix :\n");
+            for (i = 0; i < 10; i++)
+            {
+                for (j = 0; j < 10; j++)
+                {
+                    //Console.Write("element - [{0},{1}] : ", i, j);
+                    arr1[i, j] = i;
+                }
+            }
+
+            Console.Write("\nThe matrix is : \n");
+            for (i = 0; i < 10; i++)
+            {
+                Console.Write("\n");
+                for (j = 0; j < 10; j++)
+                    Console.Write("{0}", arr1[i, j]);
+            }
+            //Console.Write("\n\n");
+        }*/
+    }
+}
+
+
+
