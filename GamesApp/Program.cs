@@ -124,7 +124,10 @@ namespace GamesApp
             return PlayerList;
         }
 
-
+        /*public void updatePlayer(int currentIndex, Players player)
+        {
+            PlayerList[currentIndex] = player;
+        }*/
     }
 
 

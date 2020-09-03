@@ -14,6 +14,9 @@ namespace GamesApp
         private string[] difficultyLevel;
         private string filepath;
         private string userInput;
+        private string playerCha;
+        public List<Coordinates> coordinates = new List<Coordinates>();
+
         public Players(string playerName, int playerId, string aPassword)
         {
             PlayerName = playerName;
@@ -30,6 +33,13 @@ namespace GamesApp
         public string PlayerName { get; set; }
         public int PlayerId { get; set; }
         public string Password { get; set; }
+
+        
+        public void AddCoordinates(Coordinates coordinates)
+        {
+            this.coordinates.Add(coordinates);
+            
+        }
         public void createrPlayer(string playerName, int playerId, string password)
         {
             /*

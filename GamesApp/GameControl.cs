@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
@@ -13,6 +14,11 @@ namespace GamesApp
         private string inputString;
         private int row;
         private int col;
+        private Stack userInput = new Stack();
+        private object[] test = new object[2];
+
+
+
 
 
 
@@ -21,10 +27,10 @@ namespace GamesApp
 
         }
 
-        /*public void LoadPlayers(string playerName)
+        /*public void LoadPlayers(string player)
         {
             int i = 1;
-            Console.WriteLine($"Player {0} : {playerName}");
+            Console.WriteLine($"Player {0} : {player}");
             i++;
             NewGame();
         }*/
@@ -43,9 +49,9 @@ namespace GamesApp
 
         /*public void SaveGame()
         {
-            FileInfo fileInfo = new FileInfo(@Environment.CurrentDirectory + $"..\\..\\..\\..\\userFiles\\{playerName}.txt");
+            FileInfo fileInfo = new FileInfo(@Environment.CurrentDirectory + $"..\\..\\..\\..\\userFiles\\{player}.txt");
             //StreamWriter streamWriter = fileInfo.CreateText();
-            //streamWriter.($"PlayerName:{playerName};PlayerId{playerId};PlayerPassword:{password}");
+            //streamWriter.($"PlayerName:{player};PlayerId{playerId};PlayerPassword:{password}");
             Console.WriteLine("Player Created!");
             streamWriter.Close();
         }*/
@@ -66,12 +72,16 @@ namespace GamesApp
         }
 
 
-        public void MakeAMove(string playerName)
+        public void MakeAMove(Players player, int currentIndex)
         {
-            userInputs = GetUserInput(playerName);
+            userInputs = GetUserInput(player.PlayerName);
             row = Convert.ToInt32(userInputs[0]);
             col = Convert.ToInt32(userInputs[1]);
-            gameBoard.UpdateGrid(row, col);
-        }
+            gameBoard.UpdateGrid(row, col, currentIndex);
+            player.AddCoordinates(new Coordinates(row, col, " ")); 
+
+
+
+    }
     }
 }
