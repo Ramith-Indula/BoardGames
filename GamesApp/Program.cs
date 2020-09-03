@@ -10,13 +10,19 @@ namespace GamesApp
 
         private static GameModeSelection gameModeSelection = new GameModeSelection();
         private static Players players = new Players();
-        private static Players[] PlayerList;
+        private static ScoreCard scoreCard = new ScoreCard();
+        private static GameControl gameControl = new GameControl();
+        private static Game game = new Game();
+        public static Players[] PlayerList;
         private static string playerName;
         private static int gameOption;
         private static int id = 1;
         static void Main(string[] args)
         {
-            StartGame();
+           StartGame();
+            // scoreCard.DisplayScoreCard();
+            game.LoadPlayers();
+            
 
         }
         static void StartGame()
@@ -29,12 +35,13 @@ namespace GamesApp
                 {
                     gameOption = gameModeSelection.ThirdMenu();
                     InitializePlayers(gameOption);
+                    gameControl.NewGame();
+                    
                 }
                 else if (gameOption == 1)
                 {
-                    /* Implementation or call of Load Game function to be done here !
-                   * Refer ToDoList.txt
-                   */
+                    InitializePlayers(gameOption);
+                    gameControl.LoadGame();
                 }
                 else if (gameOption == 2)
                 {
@@ -73,6 +80,7 @@ namespace GamesApp
                     password = players.GetConsolePassword();
                     Players player = new Players(playerName, generateId(), password);
                     PlayerList[i] = player;
+                   
 
                 }
 
@@ -111,6 +119,10 @@ namespace GamesApp
             return 000 + randomId;
         }
 
+        public Players[] GetPlayers()
+        {
+            return PlayerList;
+        }
 
 
     }

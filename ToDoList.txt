@@ -100,3 +100,31 @@ Main Components - Game(Which one out of three games)
 				  Score Board
 				  Winner Selection
 				  
+
+
+
+
+
+
+
+
+
+
+
+Use stacks for undo and redo 
+(object ref.)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
