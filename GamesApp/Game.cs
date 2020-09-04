@@ -13,8 +13,6 @@ namespace GamesApp
         private Players players = new Players();
         private Program program = new Program();
         private Players[] getPlayers;
-
-
         public Game()
         {
 
@@ -22,16 +20,12 @@ namespace GamesApp
 
 
         }
-
-
-
         public void LoadPlayers()
         {
             getPlayers = program.GetPlayers();
             GamePlay();
 
         }
-
         public void GamePlay()
         {
             Stack userInput = new Stack();
@@ -40,7 +34,6 @@ namespace GamesApp
             bool playerWins = false;
             do
             {
-
                 gameControl.MakeAMove(getPlayers[currentPlayerIndex], currentPlayerIndex);
                 playerWins = checkForAStrike(getPlayers[currentPlayerIndex]);
                 currentPlayerIndex ^= playerIndex;
@@ -50,59 +43,62 @@ namespace GamesApp
             playerWins = false;
 
         }
-
-
-
         public bool checkForAStrike(Players player)
         {
             bool found = false;
             Coordinates existingCoordinateObj = player.coordinates.Last();
             Coordinates coordinates = new Coordinates(existingCoordinateObj.Row, existingCoordinateObj.Col, existingCoordinateObj.Cha);
             //top
-            if (CheckDirection(0, -1, player, new Coordinates(existingCoordinateObj.Row, existingCoordinateObj.Col, existingCoordinateObj.Cha)))
+            if (CheckDirection(0, -1, 
+                player, new Coordinates(existingCoordinateObj.Row, existingCoordinateObj.Col, existingCoordinateObj.Cha)))
             {
                 return true;
             }
             //bottom
-            if (CheckDirection(0, +1, player, new Coordinates(existingCoordinateObj.Row, existingCoordinateObj.Col, existingCoordinateObj.Cha)))
+            if (CheckDirection(0, +1, 
+                player, new Coordinates(existingCoordinateObj.Row, existingCoordinateObj.Col, existingCoordinateObj.Cha)))
             {
                 return true;
             }
             //Right
-            if (CheckDirection(+1, 0, player, new Coordinates(existingCoordinateObj.Row, existingCoordinateObj.Col, existingCoordinateObj.Cha)))
+            if (CheckDirection(+1, 0, 
+                player, new Coordinates(existingCoordinateObj.Row, existingCoordinateObj.Col, existingCoordinateObj.Cha)))
             {
                 return true;
             }
             //left
-            if (CheckDirection(-1, 0, player, new Coordinates(existingCoordinateObj.Row, existingCoordinateObj.Col, existingCoordinateObj.Cha)))
+            if (CheckDirection(-1, 0, 
+                player, new Coordinates(existingCoordinateObj.Row, existingCoordinateObj.Col, existingCoordinateObj.Cha)))
             {
                 return true;
             }
             //north east
-            if (CheckDirection(+1, -1, player, new Coordinates(existingCoordinateObj.Row, existingCoordinateObj.Col, existingCoordinateObj.Cha)))
+            if (CheckDirection(+1, -1,
+                player, new Coordinates(existingCoordinateObj.Row, existingCoordinateObj.Col, existingCoordinateObj.Cha)))
             {
                 return true;
             }
             //north west
-            if (CheckDirection(-1, -1, player, new Coordinates(existingCoordinateObj.Row, existingCoordinateObj.Col, existingCoordinateObj.Cha)))
+            if (CheckDirection(-1, -1,
+                player, new Coordinates(existingCoordinateObj.Row, existingCoordinateObj.Col, existingCoordinateObj.Cha)))
             {
                 return true;
             }
             //south east
-            if (CheckDirection(+1, +1, player, new Coordinates(existingCoordinateObj.Row, existingCoordinateObj.Col, existingCoordinateObj.Cha)))
+            if (CheckDirection(+1, +1,
+                player, new Coordinates(existingCoordinateObj.Row, existingCoordinateObj.Col, existingCoordinateObj.Cha)))
             {
                 return true;
             }
             //south west
-            if (CheckDirection(-1, +1, player, new Coordinates(existingCoordinateObj.Row, existingCoordinateObj.Col, existingCoordinateObj.Cha)))
+            if (CheckDirection(-1, +1, 
+                player, new Coordinates(existingCoordinateObj.Row, existingCoordinateObj.Col, existingCoordinateObj.Cha)))
             {
                 return true;
             }
 
             return false;
         }
-
-
         public bool CheckDirection(int xIncrement, int yIncrement, Players player, Coordinates coordinates)
         {
 
@@ -129,8 +125,6 @@ namespace GamesApp
 
             return found;
         }
-
-
         public bool CheckCoordinateExist(List<Coordinates> coordinates, Coordinates currentCoordinates)
         {
             foreach (var coordinate in coordinates)

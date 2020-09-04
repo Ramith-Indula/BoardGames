@@ -8,7 +8,6 @@ namespace GamesApp
 {
     class GameControl
     {
-
         private GameBoard gameBoard = new GameBoard();
         private string[] userInputs;
         private string inputString;
@@ -17,30 +16,15 @@ namespace GamesApp
         private Stack userInput = new Stack();
         private object[] test = new object[2];
 
-
-
-
-
-
         public GameControl()
         {
 
         }
-
-        /*public void LoadPlayers(string player)
-        {
-            int i = 1;
-            Console.WriteLine($"Player {0} : {player}");
-            i++;
-            NewGame();
-        }*/
-
         public void NewGame()
         {
             Console.WriteLine("Creating a new game.......\t");
             gameBoard.Grid();
         }
-
         public void LoadGame()
         {
             Console.WriteLine("Loading Game......\t");
@@ -55,9 +39,6 @@ namespace GamesApp
             Console.WriteLine("Player Created!");
             streamWriter.Close();
         }*/
-
-
-
         public string[] GetUserInput(string playerName)
         {
 
@@ -70,8 +51,6 @@ namespace GamesApp
             userInputs = (inputString.Split(','));
             return userInputs;
         }
-
-
         public void MakeAMove(Players player, int currentIndex)
         {
             userInputs = GetUserInput(player.PlayerName);

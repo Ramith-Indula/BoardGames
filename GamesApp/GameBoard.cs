@@ -83,36 +83,6 @@ namespace GamesApp
         }
 
 
-
-        /*public void Grid()
-        {
-            int i, j;
-            int[,] arr1 = new int[10, 10];
-
-            Console.Write("\n\nRead a 2D array of size 3x3 and print the matrix :\n");
-            Console.Write("------------------------------------------------------\n");
-
-
-            // Stored values into the array
-            Console.Write("Input elements in the matrix :\n");
-            for (i = 0; i < 10; i++)
-            {
-                for (j = 0; j < 10; j++)
-                {
-                    //Console.Write("element - [{0},{1}] : ", i, j);
-                    arr1[i, j] = i;
-                }
-            }
-
-            Console.Write("\nThe matrix is : \n");
-            for (i = 0; i < 10; i++)
-            {
-                Console.Write("\n");
-                for (j = 0; j < 10; j++)
-                    Console.Write("{0}", arr1[i, j]);
-            }
-            //Console.Write("\n\n");
-        }*/
     }
 }
 

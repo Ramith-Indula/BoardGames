@@ -7,12 +7,12 @@ namespace GamesApp
 {
     class Program
     {
-
         private static GameModeSelection gameModeSelection = new GameModeSelection();
         private static Players players = new Players();
         private static ScoreCard scoreCard = new ScoreCard();
         private static GameControl gameControl = new GameControl();
         private static Game game = new Game();
+        private static Gomoku gomoku = new Gomoku();
         public static Players[] PlayerList;
         private static string playerName;
         private static int gameOption;
@@ -21,7 +21,7 @@ namespace GamesApp
         {
            StartGame();
             // scoreCard.DisplayScoreCard();
-            game.LoadPlayers();
+            gomoku.LoadPlayers();
             
 
         }
@@ -118,7 +118,6 @@ namespace GamesApp
             int randomId = id++;
             return 000 + randomId;
         }
-
         public Players[] GetPlayers()
         {
             return PlayerList;
