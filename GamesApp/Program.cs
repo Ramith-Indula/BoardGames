@@ -11,7 +11,6 @@ namespace GamesApp
         private static Players players = new Players();
         private static ScoreCard scoreCard = new ScoreCard();
         private static GameControl gameControl = new GameControl();
-        private static Game game = new Game();
         private static Gomoku gomoku = new Gomoku();
         public static Players[] PlayerList;
         private static string playerName;
@@ -19,10 +18,9 @@ namespace GamesApp
         private static int id = 1;
         static void Main(string[] args)
         {
-           StartGame();
-            // scoreCard.DisplayScoreCard();
+            StartGame();
             gomoku.LoadPlayers();
-            
+
 
         }
         static void StartGame()
@@ -36,7 +34,7 @@ namespace GamesApp
                     gameOption = gameModeSelection.ThirdMenu();
                     InitializePlayers(gameOption);
                     gameControl.NewGame();
-                    
+
                 }
                 else if (gameOption == 1)
                 {
@@ -52,9 +50,11 @@ namespace GamesApp
             }
             else if (gameOption == 1)
             {
-                /* Implementation or call of Human vs Computer function to be done here !
-                   * Refer ToDoList.txt
-                   */
+                Console.WriteLine("Loading....");
+                Environment.Exit(0);
+                /*
+                 * human vs computer
+                 */
             }
             else
             {
@@ -80,14 +80,10 @@ namespace GamesApp
                     password = players.GetConsolePassword();
                     Players player = new Players(playerName, generateId(), password);
                     PlayerList[i] = player;
-                   
+
 
                 }
 
-                /*for (int i = 0; i < PlayerList.Length; i++)
-                {
-                    Console.WriteLine("Player Name: {0}\n Player ID: {1}\n Password: {2}", PlayerList[i].PlayerName, PlayerList[i].PlayerId,PlayerList[i].Password);
-                }*/
             }
             else if (gameOption == 1)
             {
@@ -123,10 +119,6 @@ namespace GamesApp
             return PlayerList;
         }
 
-        /*public void updatePlayer(int currentIndex, Players player)
-        {
-            PlayerList[currentIndex] = player;
-        }*/
     }
 
 

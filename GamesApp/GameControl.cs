@@ -24,11 +24,13 @@ namespace GamesApp
         {
             Console.WriteLine("Creating a new game.......\t");
             gameBoard.Grid();
+            gameBoard.printGrid();
         }
         public void LoadGame()
         {
             Console.WriteLine("Loading Game......\t");
             gameBoard.Grid();
+            gameBoard.printGrid();
         }
 
         /*public void SaveGame()
@@ -41,10 +43,8 @@ namespace GamesApp
         }*/
         public string[] GetUserInput(string playerName)
         {
-
-
             /*
-             * validationn
+             * validation needs to be added
              */
             Console.WriteLine("{0}'s Next Move >>> ", playerName);
             inputString = Console.ReadLine();

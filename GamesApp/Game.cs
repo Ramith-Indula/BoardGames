@@ -13,6 +13,7 @@ namespace GamesApp
         private Players players = new Players();
         private Program program = new Program();
         private Players[] getPlayers;
+        private ScoreCard scoreCard = new ScoreCard();
         public Game()
         {
 
@@ -41,6 +42,7 @@ namespace GamesApp
             } while (!playerWins);
 
             playerWins = false;
+            scoreCard.DisplayScoreCard(getPlayers[currentPlayerIndex ^= playerIndex]);
 
         }
         public bool checkForAStrike(Players player)
@@ -108,7 +110,7 @@ namespace GamesApp
             do
             {
                 hasAMatch = false;
-                if (CheckCoordinateExist(player.coordinates, coordinates))
+                if (Coordinates.CheckCoordinateExist(player.coordinates, coordinates))
                 {
                     hasAMatch = true;
                     if (count >= 5)
@@ -125,18 +127,7 @@ namespace GamesApp
 
             return found;
         }
-        public bool CheckCoordinateExist(List<Coordinates> coordinates, Coordinates currentCoordinates)
-        {
-            foreach (var coordinate in coordinates)
-            {
-                if (coordinate.Row == currentCoordinates.Row && coordinate.Col == currentCoordinates.Col)
-                {
-                    return true;
-                }
-            }
-
-            return false;
-        }
+        
     }
 
 }

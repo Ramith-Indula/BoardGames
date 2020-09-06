@@ -12,14 +12,14 @@ namespace GamesApp
 
         }
         static int tableWidth = 75;
-        public void DisplayScoreCard()
+        public void DisplayScoreCard(Players winner)
         {
             Console.Clear();
             PrintLine();
             PrintRow("WINNER!");
             PrintLine();
-            PrintRow("Player 01 defeated Player 02 in this game! ");
-            PrintRow("************ Congratulations Player 01! ************");
+            PrintRow($"{winner.PlayerName} won the game!" );
+            PrintRow($"************ Congratulations {winner.PlayerName}! ************");
             PrintLine();
             Console.ReadLine();
         }

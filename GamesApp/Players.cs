@@ -80,10 +80,7 @@ namespace GamesApp
                 exit = false;
             }
         }
-        public void openGame()
-        {
-
-        }
+        
         public string GetConsolePassword()
         {
             StringBuilder stringBuilder = new StringBuilder();

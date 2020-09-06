@@ -23,7 +23,18 @@ namespace GamesApp
         public int Col { get; set; }
         public string Cha { get; set; }
 
+        public static bool CheckCoordinateExist(List<Coordinates> coordinates, Coordinates currentCoordinates)
+        {
+            foreach (var coordinate in coordinates)
+            {
+                if (coordinate.Row == currentCoordinates.Row && coordinate.Col == currentCoordinates.Col)
+                {
+                    return true;
+                }
+            }
 
+            return false;
+        }
 
 
 
